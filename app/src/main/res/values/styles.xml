@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BeerBoxBaseBottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/background_bottom_sheet_transparent</item>
+    </style>
+
+    <style name="BeerBoxRoundedCornersDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BeerBoxBaseBottomSheet</item>
+    </style>
+
+</resources>
