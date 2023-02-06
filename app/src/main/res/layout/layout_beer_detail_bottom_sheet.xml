@@ -4,89 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background_bottom_sheet">
+    android:background="@drawable/background_bottom_sheet"
+    android:paddingTop="30dp"
+    android:paddingBottom="20dp">
 
     <ImageView
-        android:id="@+id/bookmark"
-        android:layout_width="30dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="-5dp"
-        android:layout_marginEnd="30dp"
+        android:id="@+id/beerImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
         android:contentDescription="@null"
         android:scaleType="fitXY"
-        android:src="@drawable/icon_bookmark"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:id="@+id/secondaryContainer"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:paddingTop="30dp"
-        android:paddingBottom="20dp">
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/beerImageView">
 
-        <ImageView
-            android:id="@+id/beerImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginBottom="15dp"
-            android:contentDescription="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/secondaryContainer"
+        <TextView
+            android:id="@+id/beerNameTextView"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/beerImageView">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sunk Punk" />
 
-            <TextView
-                android:id="@+id/beerNameTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:textAlignment="viewStart"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Sunk Punk" />
+        <TextView
+            android:id="@+id/beerTagTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:textAlignment="viewStart"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beerNameTextView"
+            tools:text="Ocean Fermented Lager" />
 
-            <TextView
-                android:id="@+id/beerTagTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:ellipsize="end"
-                android:textAlignment="viewStart"
-                android:textColor="@color/grey"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/beerNameTextView"
-                tools:text="Ocean Fermented Lager" />
-
-            <TextView
-                android:id="@+id/beerDescriptionTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ellipsize="end"
-                android:textColor="@color/grey"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/beerTagTextView"
-                tools:text="It's rumored just a drop can calm the fiercest of storms. A balance of sweet, salt and savoury, citrus, spruce and caramel. Fermented at the bottom of the North Sea, which just so happens to be the perfect temperature for lagers to ferment." />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/beerDescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/beerTagTextView"
+            tools:text="It's rumored just a drop can calm the fiercest of storms. A balance of sweet, salt and savoury, citrus, spruce and caramel. Fermented at the bottom of the North Sea, which just so happens to be the perfect temperature for lagers to ferment." />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
